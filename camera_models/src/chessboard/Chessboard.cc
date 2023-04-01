@@ -34,7 +34,7 @@ Chessboard::findCorners(bool useOpenCV)
     mCornersFound = findChessboardCorners(mImage, mBoardSize, mCorners,
                                           cv::CALIB_CB_ADAPTIVE_THRESH +
                                           cv::CALIB_CB_NORMALIZE_IMAGE +
-                                          cv:CALIB_CB_FILTER_QUADS +
+                                          cv::CALIB_CB_FILTER_QUADS +
                                           cv::CALIB_CB_FAST_CHECK,
                                           useOpenCV);
 
@@ -1239,7 +1239,7 @@ Chessboard::generateQuads(std::vector<ChessboardQuadPtr>& quads,
             dp = pt[1] - pt[2];
             double d4 = sqrt(dp.dot(dp));
 
-            if (!(flags & cv:CALIB_CB_FILTER_QUADS) ||
+            if (!(flags & cv::CALIB_CB_FILTER_QUADS) ||
                 (d3*4 > d4 && d4*4 > d3 && d3*d4 < area*1.5 && area > minSize &&
                 d1 >= 0.15 * p && d2 >= 0.15 * p))
             {
