@@ -9,6 +9,7 @@
 #include <opencv2/calib3d/calib3d.hpp>
 #include <opencv2/core/eigen.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
+#include <opencv2/imgproc/imgproc_c.h>
 #include <boost/lexical_cast.hpp>
 #include <boost/algorithm/string.hpp>
 
